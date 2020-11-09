@@ -1,0 +1,37 @@
+<div class="container">
+    <!--Section: Products v.4-->
+    <section class="pb-3 text-center ">
+
+        <!--Section heading-->
+        <h2 class="h1 py-5">{{lacategoria}} </h2>
+        <!--Grid row-->
+        <div class="row">
+            <ng-container *ngFor="let categoriaproducto of allCategoriaProductos; let i=index">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <!--Collection card-->
+                    <mdb-card class="collection-card z-depth-1-half">
+                        <!--Card image-->
+                        <div class="view zoom waves-light" mdbWavesEffect>
+                            <mdb-card-img src="{{categoriaproducto.imagen}}" alt=""></mdb-card-img>
+                            <div style="bottom: 1rem;padding: 0;" class="stripe dark">
+                                <a>
+                                    <p>{{categoriaproducto.titulo}}
+                                        <mdb-icon fas icon="angle-right"></mdb-icon>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Card image-->
+                    </mdb-card>
+                    <!--Collection card-->
+                </div>
+                <!--Grid column-->
+            </ng-container>
+
+        </div>
+        <!--Grid row-->
+
+    </section>
+    <!--Section: Products v.4-->
+</div>

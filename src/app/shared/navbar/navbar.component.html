@@ -2,10 +2,12 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
 
     <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">
-  <img class="img-fluid" style="width: 50px;" src="https://www.licoreria24hrs.com/backend/img/logo/logo.jpg" alt="Logo">
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid" style="width: 50px;" src="https://www.licoreria24hrs.com/backend/img/logo/logo.jpg" alt="Logo">
 
-    </a></mdb-navbar-brand>
+        </a>
+    </mdb-navbar-brand>
 
 
 
@@ -15,11 +17,7 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Productos</a>
+                <a class="nav-link waves-light" [routerLink]="['/']" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
             </li>
 
             <!-- Dropdown -->
@@ -27,12 +25,9 @@
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           Cátegorias<span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Cerveza</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Cócteles  Artesanales</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Licores Artesanales</a>
-                    <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Vinos</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Tragos</a>
+                    <ng-container *ngFor="let categoria of allCategorias; let i=index">
+                        <a class="dropdown-item waves-light" (click)="onClickCategoria()" [routerLink]="['/categoria/',categoria.titulo]">{{categoria.titulo}}</a>
+                    </ng-container>
                 </div>
             </li>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LicoreriaservicesService } from 'src/app/services/licoreriaservices.service';
 
 @Component({
   selector: 'app-featured-product',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./featured-product.component.scss']
 })
 export class FeaturedProductComponent implements OnInit {
-
-  constructor() { }
+  allProductos: any;
+  constructor(
+    private LicoreriaInyected: LicoreriaservicesService
+  ) { }
 
   ngOnInit(): void {
+    this.rtzProductos();
+  }
+
+  rtzProductos() {
+    this.LicoreriaInyected.leerProducto().subscribe(
+      (productos) => {
+        this.allProductos = productos;
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
 }

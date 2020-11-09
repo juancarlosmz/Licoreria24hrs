@@ -14,7 +14,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { SlideshowComponent } from './home/slideshow/slideshow.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     FeaturedProductComponent,
     HomeComponent,
     SlideshowComponent,
-    FooterComponent
+    FooterComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     FormsModule,
     AppRoutingModule,
     DropdownModule.forRoot(),
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
