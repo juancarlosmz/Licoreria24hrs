@@ -2,7 +2,12 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
 
     <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+    <mdb-navbar-brand><a class="navbar-brand" href="#">
+  <img class="img-fluid" style="width: 50px;" src="https://www.licoreria24hrs.com/backend/img/logo/logo.jpg" alt="Logo">
+
+    </a></mdb-navbar-brand>
+
+
 
     <!-- Collapsible content -->
     <links>
@@ -12,23 +17,22 @@
             <li class="nav-item active">
                 <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Licores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+                <a class="nav-link waves-light" mdbWavesEffect>Productos</a>
             </li>
 
             <!-- Dropdown -->
             <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Basic dropdown<span class="caret"></span></a>
+          Cátegorias<span class="caret"></span></a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Cerveza</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Cócteles  Artesanales</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Licores Artesanales</a>
                     <div class="divider dropdown-divider"></div>
-                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Vinos</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Tragos</a>
                 </div>
             </li>
 
@@ -36,16 +40,7 @@
         <!-- Links -->
 
         <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item">
-                <a class="nav-link">
-                    <mdb-icon fab icon="twitter"></mdb-icon>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">
-                    <mdb-icon fab icon="google-plus"></mdb-icon>
-                </a>
-            </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link">
                     <div class="btn-group" mdbDropdown>
@@ -60,6 +55,7 @@
                     </div>
                 </a>
             </li>
+-->
         </ul>
     </links>
     <!-- Collapsible content -->
