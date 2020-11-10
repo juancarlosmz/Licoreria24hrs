@@ -15,7 +15,7 @@
                         <div class="view zoom waves-light" mdbWavesEffect>
                             <mdb-card-img src="{{categoriaproducto.imagen}}" alt=""></mdb-card-img>
                             <div style="bottom: 1rem;padding: 0;" class="stripe dark">
-                                <a>
+                                <a [routerLink]="['/producto/',categoriaproducto.titulo]">
                                     <p>{{categoriaproducto.titulo}}
                                         <mdb-icon fas icon="angle-right"></mdb-icon>
                                     </p>

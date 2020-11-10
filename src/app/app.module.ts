@@ -16,6 +16,7 @@ import { SlideshowComponent } from './home/slideshow/slideshow.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ProductoComponent } from './producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
     HomeComponent,
     SlideshowComponent,
     FooterComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
